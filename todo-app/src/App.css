@@ -1,0 +1,132 @@
+/* Base Reset & Layout */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #e0e0e0;
+  font-family: "Orbitron", sans-serif;
+}
+/* Dark theme (default) */
+body[data-theme="dark"] {
+  --background: #0f0f1a;
+  --text-color: #e0e0e0;
+  --footer-bg: #0f0f1a;
+}
+
+/* Light theme */
+body[data-theme="light"] {
+  --background: #f0f8ff;
+  --text-color: #111;
+  --footer-bg: #e0e0e0;
+}
+
+/* Use variables for colors throughout your CSS */
+body {
+  background-color: var(--background);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body {
+  background-color: #0f0f1a;
+  background-image: radial-gradient(circle, #1c1c2b, #0f0f1a);
+  min-height: 100vh;
+  padding: 2rem;
+  font-family: "Orbitron", sans-serif;
+}
+
+/* App Container */
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Logo Enhancements */
+.logo:hover {
+  filter: drop-shadow(0 0 2em #00f7ffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #7fffdfa0);
+}
+
+/* Card Styling */
+.card {
+  background: rgba(255 255 255 / 0.05);
+  border: 1px solid rgba(0 255 255 / 0.2);
+  color: var(--text-color);
+  /* rest unchanged */
+
+  border-radius: 1.5rem;
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.15);
+  transition: all 0.3s ease-in-out;
+}
+
+.card:hover {
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.4);
+  transform: translateY(-3px);
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h6 {
+  color: #00f7ff;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
+
+/* Input Fields */
+input[type="text"],
+.MuiInputBase-input {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid #00f7ff;
+  color: #e0e0e0;
+  border-radius: 10px;
+  padding: 0.5em 1em;
+  outline: none;
+  transition: 0.3s;
+}
+input[type="text"]:focus {
+  border-color: #00f7ff;
+  box-shadow: 0 0 5px #00f7ff;
+}
+
+/* Buttons */
+button,
+.MuiButton-root {
+  background-color: #00f7ff;
+  color: #0f0f1a;
+  border: none;
+  padding: 0.6em 1.2em;
+  margin-top: 0.5rem;
+  margin-right: 0.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: bold;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
+button:hover,
+.MuiButton-root:hover {
+  background-color: #0ff;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.8);
+  transform: scale(1.03);
+}
+
+/* Checkbox */
+input[type="checkbox"] {
+  accent-color: #00f7ff;
+}
+
+/* Footer (if needed) */
+footer {
+  margin-top: 3rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  color: #888;
+  font-size: 0.9rem;
+  text-align: center;
+}
